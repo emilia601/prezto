@@ -5,6 +5,33 @@ Prezto is the configuration framework for [Zsh][1]; it enriches the command line
 interface environment with sane defaults, aliases, functions, auto completion,
 and prompt themes.
 
+Changes based on OriginalVersion
+------------
+
+2020.01.18
+1. 增加sudo插件
+2. 增加key-bindings配置，便于通过上下按键来进行最匹配的历史命令自动补全
+3. 修改默认theme为skwp,  开启若干有用的plugin进默认配置
+
+安装命令
+------------
+
+     ```console
+     sudo apt-get install zsh
+     zsh
+     
+     chsh -s /bin/zsh
+     
+     git clone --recursive https://github.com/xdutaotao/prezto.git "${ZDOTDIR:-$HOME}/.zprezto"
+      
+     setopt EXTENDED_GLOB
+     for rcfile in "${ZDOTDIR:-$HOME}"/.zprezto/runcoms/^README.md(.N); do
+       ln -s "$rcfile" "${ZDOTDIR:-$HOME}/.${rcfile:t}"
+     done
+     
+     
+     ```
+
 Installation
 ------------
 
@@ -20,7 +47,7 @@ version is 4.3.11.
   2. Clone the repository:
 
      ```console
-     git clone --recursive https://github.com/sorin-ionescu/prezto.git "${ZDOTDIR:-$HOME}/.zprezto"
+     git clone --recursive https://github.com/xdutaotao/prezto.git "${ZDOTDIR:-$HOME}/.zprezto"
      ```
 
   3. Create a new Zsh configuration by copying the Zsh configuration files
